@@ -2,11 +2,6 @@
 
 angular.module('ngWebPrototypeApp')
   .controller('MainCtrl', function ($scope, $facebook) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
     function refresh() {
     $facebook.api("/me").then( 
       function(response) {
@@ -16,4 +11,5 @@ angular.module('ngWebPrototypeApp')
         $scope.welcomeMsg = "Please log in";
     });
   }
+    refresh();
   });

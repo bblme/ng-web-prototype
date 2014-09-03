@@ -18,6 +18,10 @@ module.exports = function(config) {
       'test/mock/**/*.js',
       'test/spec/**/*.js'
     ],
+  plugins: [
+      'karma-chrome-launcher',
+      'karma-jasmine'
+  ],
 
     // list of files / patterns to exclude
     exclude: [],
