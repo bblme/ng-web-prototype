@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+.bubble-icon {
+  max-width: 50%;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.facebook-login {
+  max-width: 80%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+
+.friends-bubbles a:after {
+  right: 15px;
+  content: '\e817';
+}
+.friends-bubbles a.awaiting:after {
+  right: 15px;
+  content: '\e825';
+}
+.friends-bubbles a.bubbled:after {
+  right: 15px;
+  content: '\e810';
+}
+
+
+div#send-confirm {
+  width: 240px;
+  left: 50%;
+  top: 50%;
+  margin-left: -120px;
+  margin-top: -120px;
+  max-height: 206px;
+  min-height: 0;
+}
