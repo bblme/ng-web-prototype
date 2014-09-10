@@ -31,10 +31,7 @@ angular.module('ngWebPrototypeApp').controller('MainCtrl', function ($scope, $fa
 
     function retrieveFriends(){
         $facebook.api('/me/taggable_friends').then(function(response) {
-            $scope.user.friends = [];
-            angular.forEach(response.data, function(friend) {
-                $scope.user.friends.push(friend);
-            });
+            $scope.user.friends = response.data;
         }, function(reason) {
             console.log('reason=['+reason+']');
             //TODO ???
