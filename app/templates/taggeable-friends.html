@@ -1,0 +1,8 @@
+<ul class="table-view" ng-show="user.friends.length > 0">
+    <li class="table-view-cell media" ng-repeat="friend in user.friends">
+        <a class="navigate-right" href="#" data-transition="slide-in">
+            <img class="media-object pull-left" src="{{friend.picture.data.url}}">
+            <div class="media-body">{{friend.name}}</div>
+        </a>
+    </li>
+</ul>

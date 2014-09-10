@@ -1,15 +1,27 @@
 'use strict';
 
 angular
-  .module('ngWebPrototypeApp', ['ngFacebook']);
+  .module('ngWebPrototypeApp', ['ngRoute', 'ngFacebook']);
 
 
 angular
-  .module('ngWebPrototypeApp').config( function( $facebookProvider ) {
-  $facebookProvider.setAppId('686705174737387');
-  $facebookProvider.setCustomInit({
-      version    : 'v1.0'
-   });
+  .module('ngWebPrototypeApp').config( function( $facebookProvider, $routeProvider ) {
+      $facebookProvider.setAppId('686705174737387');
+      $facebookProvider.setCustomInit({
+          version    : 'v1.0'
+       });
+      $routeProvider
+                .when('/', {
+                    templateUrl: 'views/main.html',
+                    controller: 'MainCtrl'
+                })
+                .when('/bubbles', {
+                  templateUrl: 'views/bubbles.html',
+                  controller: 'BubblesCtrl'
+                })
+                .otherwise({
+                    redirectTo: '/'
+                });
 })
 
 angular
